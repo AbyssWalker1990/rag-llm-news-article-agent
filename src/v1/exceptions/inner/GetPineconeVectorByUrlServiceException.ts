@@ -1,0 +1,3 @@
+class GetPineconeVectorByUrlServiceException extends Error {}
+
+export default GetPineconeVectorByUrlServiceException

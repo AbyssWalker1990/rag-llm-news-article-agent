@@ -12,8 +12,26 @@ class ParseEnvVariablesService {
       port: Number(getOrFail(env, 'API_INSIDE_PORT')),
     }
 
+    const kafka = {
+      broker: getOrFail(env, 'KAFKA_BROKER'),
+      username: getOrFail(env, 'KAFKA_USERNAME'),
+      password: getOrFail(env, 'KAFKA_PASSWORD'),
+    }
+
+    const openai = {
+      apiKey: getOrFail(env, 'OPENAI_API_KEY'),
+    }
+
+    const pinecone = {
+      apiKey: getOrFail(env, 'PINECONE_API_KEY'),
+      index: getOrFail(env, 'PINECONE_INDEX'),
+    }
+
     return {
       app,
+      kafka,
+      openai,
+      pinecone,
     }
   }
 
