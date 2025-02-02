@@ -25,9 +25,11 @@ PINECONE_INDEX=
 2. Run the following command:
 
 ```sh
-docker-compose up
+docker compose up
 ```
 
 ## Live demo:
 
 POST https://rag-llm-news-article-agent.onrender.com/api/v1/agent
+
+!!! Your free instance will spin down with inactivity, which can delay requests by 50 seconds or more. !!!
