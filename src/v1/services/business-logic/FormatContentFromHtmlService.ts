@@ -17,7 +17,6 @@ class FormatContentFromHtmlService {
                           and add json in the end of your answer. Structure: { "title": "find title in additional info", "date": "find publication date in additional info and format to YYYY-MM-DD" }`
       const completionChoice = await this.createCompletionService.handle(scrapedData, devMessage)
       const extractedJson = this.extractJsonFromText(completionChoice.message.content!)
-      console.log('Extracted JSON:', extractedJson)
 
       return { answer: completionChoice.message.content!, extractedMetadata: extractedJson }
     } catch (e) {
